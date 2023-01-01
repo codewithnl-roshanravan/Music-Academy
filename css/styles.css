@@ -260,18 +260,47 @@ a {
   display: flex;
 }
 
-.input-group .input{
-border: 0;
-flex-grow: 1;
-padding: 1.5rem 1rem;
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
 }
 
 .input-group .btn {
-    margin: 4px;
+  margin: 4px;
 }
 
+
+}
 @media screen and (min-width: 1024px) {
   .input {
     font-size: 1.5rem;
   }
+}
+
+
+.plan--popular .card__header {
+    position: relative;
+}
+
+.plan--popular .card__header::before {
+  content: url(../images1/popular.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+
+@media screen and (min-width:1024px){
+.plan__name {
+    font-size: 1.4rem;
+}
+.plan__price {
+    font-size: 5rem;
+}
+
+.plan__billing-cycle {
+    font-size: 1.6rem;
+}
 }
