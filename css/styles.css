@@ -164,8 +164,17 @@ a {
   height: 40px;
 }
 
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 .ico--primary {
   fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: #fff;
 }
 
 .icon-container {
@@ -176,6 +185,10 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon-container--accent {
+  background: var(--color-accent);
 }
 
 /* buttons */
@@ -240,6 +253,17 @@ a {
   background: var(--color-headings);
   color: #fff;
 }
+
+.btn--stretched {
+padding-left: 6rem;
+padding-right: 6rem;
+}
+
+.btn--block {
+width: 100%;
+display: inline-block;
+}
+ 
 
 /* inputs */
 .input {
@@ -389,3 +413,81 @@ line-height: 1.3;
   }
 }
 
+/* testimonials */
+.testimonial {
+  padding: 3rem;
+}
+
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;    
+  /* برای دقیقا" وسط قرار گرفتن آیکان کنار عکس چون icon-container پهنا و ارتفاع 64px دارد پس این 32 میشه */
+}
+
+/* چون فونت کنار عکس در این قسمت بزرگهه برای سایز تبلت */
+@media screen and (min-width: 768px) {
+  .testimonial .quote, 
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
+  }
+}
+
+/* callouts */
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+.callout--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.callout__heading {
+  color: #fff;
+  margin-top: 0;
+  font-size: 3rem;
+}
+  
+.grid {
+  display: grid;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+.callout .grid--12 {
+  grid-template-columns: 1fr auto;
+}
+
+  .callout__content {
+  text-align: left;
+}
+
+.callout .btn {
+  justify-self: start;
+  margin: 0 2rem;
+}
+}
